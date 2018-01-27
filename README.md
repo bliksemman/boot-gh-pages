@@ -17,8 +17,15 @@ Add the task after any build related commands, for instance:
         (target)
         (gh-pages :path "target")))
 
-The `:path` argument must point to a directory. Anything in that directory will be published to the gh-pages branch. The branch will be pushed (*with force*) to the default remote.
+The `:path` argument must point to a directory. Anything in that directory will
+be published to the gh-pages branch. The branch will be pushed (*with force*)
+to the default remote.
 
+## Ignore
+
+Ignore patterns can also be specified using glob syntax. Set the `:ignore` parameter
+must be a set of such patterns to skip any matching file. The paths that are matched
+are relative to the source directory (`:path`).
 
 ## License
 
